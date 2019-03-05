@@ -1,3 +1,5 @@
+import logo from './logo.png'
+
 const a = {
   textDecoration: 'none',
 }
@@ -19,5 +21,13 @@ export default {
   login: {
     ...a,
     color: 'white',
+  },
+  
+  logo:{
+	backgroundImage:`url(${logo})`,
+	backgroundRepeat:'no-repeat',
+	backgroundSize:'100% 100%',
+	height: 50,
+	width: 50,
   },
 }

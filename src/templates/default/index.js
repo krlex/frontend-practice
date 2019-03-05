@@ -62,7 +62,7 @@ class Template extends Component {
         <AppBar position="static">
           <Toolbar>
             <IconButton color="inherit" onClick={menuButtonAction}>
-              <MenuIcon />
+              <div style={styles.logo} />
               Tilda Center
             </IconButton>
             <Typography variant="title" color="inherit" style={styles.flex}>
