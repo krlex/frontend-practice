@@ -3,17 +3,33 @@ import PropTypes from 'prop-types'
 import { observer } from 'mobx-react'
 import Template from 'templates/default'
 import store from 'store'
+import styles from './styles'
+import Button from '@material-ui/core/Button';
 
 
 class Landing extends Component {
   componentWillMount() {
     this.props.store.title.title = 'Landing'
   }
+  
+  handleClick = () =>{
+	  console.log('Radi')
+  }
 
   render() {
     return (
-      <Template>
-        Landing Page
+      <Template style={{}}>
+        <div style={styles.content}>
+          <h1>Welcome</h1>
+            <h3>Lorem Ipsum is simply dummy text of the printing and 
+            typesetting industry. Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s, when an unknown 
+            printer took a galley of type and scrambled it to make a 
+            type specimen book.</h3>
+           <Button variant="contained" color="primary" onClick={this.handleClick}>
+          Learn More
+        </Button>
+        </div>
       </Template>
     )
   }

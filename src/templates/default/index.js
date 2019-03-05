@@ -17,6 +17,7 @@ import Typography from '@material-ui/core/Typography'
 import CloseIcon from '@material-ui/icons/Clear'
 import DashboardIcon from '@material-ui/icons/Dashboard'
 import MenuIcon from '@material-ui/icons/Menu'
+import FacebookIcon from '@material-ui/icons/Face'
 
 import EmptyTemplate from 'templates/empty'
 import store from 'store'
@@ -62,12 +63,17 @@ class Template extends Component {
           <Toolbar>
             <IconButton color="inherit" onClick={menuButtonAction}>
               <MenuIcon />
+              Tilda Center
             </IconButton>
             <Typography variant="title" color="inherit" style={styles.flex}>
-              {/* eslint-disable-next-line react/jsx-one-expression-per-line */}
-              Frontend Startkit - {this.props.store.title.title}
+              <Button color="inherit">About</Button>
+              <Button color="inherit">What we do</Button>
+              <Button color="inherit">Team</Button>
             </Typography>
             {AuthButton}
+             <IconButton color="inherit">
+              <FacebookIcon />
+            </IconButton>
           </Toolbar>
         </AppBar>
         <EmptyTemplate secure={this.props.secure} style={this.props.style}>
