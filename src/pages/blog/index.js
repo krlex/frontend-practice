@@ -7,26 +7,27 @@ import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import styles from './styles';
 import TildaButton from 'components/atoms/tilda-button';
-import UserStripe from 'components/organisms/user-stripe';
+import BlogStripe from 'components/organisms/blog-stripe';
 
 
 @observer
-class Landing extends Component {
+class Blog extends Component {
   componentWillMount() {
-    store.title.title = 'Landing';
+    store.title.title = 'Blog';
   }
 
   handleClick = () => {
-    store.user.list.push({
+    store.blog.list.push({
 	  id:5,
-	  email:'test@mail.com',
+	  title:'test123',
+	  text:'nestonestonesto',
 	})
   }
 
   render() {
-      const usersVeiw = store.user.list.map((user) => {
+      const usersVeiw = store.blog.list.map((blog) => {
           return (
-              <UserStripe user={user} key={user.id}/>
+              <BlogStripe blog={blog} key={blog.id}/>
           )
       });
 
@@ -50,8 +51,7 @@ class Landing extends Component {
   }
 }
 
-
-Landing.propTypes = {
+Blog.propTypes = {
   store: PropTypes.shape({
     title: PropTypes.shape({
       title: PropTypes.string.isRequired,
@@ -63,4 +63,4 @@ Landing.propTypes = {
   }),
 }
 
-export default Landing
+export default Blog

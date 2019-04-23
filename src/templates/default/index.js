@@ -16,7 +16,6 @@ import Typography from '@material-ui/core/Typography'
 // Icons
 import CloseIcon from '@material-ui/icons/Clear'
 import DashboardIcon from '@material-ui/icons/Dashboard'
-import MenuIcon from '@material-ui/icons/Menu'
 import FacebookIcon from '@material-ui/icons/Face'
 
 import EmptyTemplate from 'templates/empty'
@@ -66,8 +65,15 @@ class Template extends Component {
               Tilda Center
             </IconButton>
             <Typography variant="title" color="inherit" style={styles.flex}>
-              <Button color="inherit">About</Button>
-              <Button color="inherit">What we do</Button>
+              <Link to="/about" style={styles.link}> 
+                <Button color="inherit">About</Button>
+              </Link>  
+              <a href="https://tilda.center" 
+                style={styles.link} 
+                target="_blank"
+                rel="noopener noreferrer">
+                  <Button color="inherit">What we do</Button>
+              </a>
               <Button color="inherit">Team</Button>
             </Typography>
             {AuthButton}

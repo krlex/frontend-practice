@@ -30,4 +30,9 @@ export default {
 	height: 50,
 	width: 50,
   },
+  
+  link: {
+	color: 'white',
+	textDecoration: 'none',
+  },
 }
