@@ -28,4 +28,17 @@ export default class BlogStore {
          text:'lorem ipsum5',
        },
 	]
+
+	@observable detail = {
+
+         id: 5,
+         email:'c@ipsum.com',
+      }
+
+    fetchAll() {
+    this.list.push({
+        id: Math.random(),
+        title:'c@ipsum.com',
+    })
+}
 }

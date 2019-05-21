@@ -17,11 +17,7 @@ class Blog extends Component {
   }
 
   handleClick = () => {
-    store.blog.list.push({
-	  id:5,
-	  title:'test123',
-	  text:'nestonestonesto',
-	})
+    store.blog.fetchAll()
   }
 
   render() {
@@ -35,8 +31,8 @@ class Blog extends Component {
       <Template style={{}}>
         <div style={styles.content}>
           <div className="wrapper">
-            <h1>Welcome to Maja Mekic Photography</h1>
-            <h3>Lorem ipsum dolor est satum itc serum</h3>
+            <h1>Welcome to Krletron 3000</h1>
+            <h3>This is your future</h3>
             <Button variant="contained" color="secondary" onClick={this.handleClick}>
                 Hello World!
             </Button>
